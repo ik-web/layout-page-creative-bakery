@@ -1,0 +1,63 @@
+.btn-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 100%;
+
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  @include laptop {
+    display: none;
+  }
+
+  &__item {
+    position: relative;
+
+    display: block;
+    width: 20px;
+    height: 2px;
+  }
+
+  &__item:after,
+  &__item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 1;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: $color-black;
+    transition-property: transform, background;
+    @include transition-smooth-duration;
+  }
+
+  &__item:before {
+    top: -3px;
+  }
+
+  &__item:after {
+    bottom: -3px;
+  }
+
+  &--active &__item:before {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &--active &__item:after {
+    bottom: 0;
+    transform: rotate(135deg);
+  }
+
+  &:hover &__item:after,
+  &:hover &__item:before {
+    background-color: $color-orange;
+  }
+}

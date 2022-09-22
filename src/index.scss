@@ -1,4 +1,6 @@
-@import './libs/normalize';
-@import './scss/fonts';
-@import './scss/var';
-@import './scss/style';
+@import "./styles/utils/reset";
+@import "./styles/utils/vars";
+@import './styles/utils/fonts';
+@import "./styles/utils/mixins";
+
+@import './styles/styles';
