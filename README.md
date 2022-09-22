@@ -18,7 +18,7 @@
 
 A practical project - an adaptive landing page "Creative Bakery", <br>
 for consolidating website layout skills using technologies such as <br>
-HTML, CSS, SASS/SCSS, JavaScript.
+HTML, CSS, Sass (SCSS), JavaScript.
 
 ## Developers
 
